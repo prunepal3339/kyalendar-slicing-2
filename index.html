@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swiper API</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+
+</head>
+
+<body>
+
+
+    <nav class="fixed z-50 top-0 w-full bg-opacity-40 bg-gray-500">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kyalendar</span>
+            </a>
+            <button data-collapse-toggle="navbar-solid-bg" type="button"
+                class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-solid-bg" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-solid-bg">
+                <ul
+                    class="flex flex-col font-medium mt-4 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 md:p-0 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                            aria-current="page">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Events</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Calendar</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="block py-2 px-3 md:p-0 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Venues</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Slider main container -->
+    <div class="z-0 relative swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://www.w3schools.com/html/pic_trulli.jpg" alt="slide1" />
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.w3schools.com/html/img_girl.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.w3schools.com/html/img_chania.jpg" alt="">
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+        <div class="flex flex-col items-center justify-center gap-y-8 z-[100] absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 text-shadow-lg transform origin-center">
+            <div class="py-3 px-6 text-white bg-blue-500 rounded-3xl text-center">
+                Featured Tag
+            </div>
+            <p class="text-4xl font-extrabold text-gray-100 text-center">
+                Centered Content
+            </p>
+            <div class="flex flex-row gap-x-8 gap-y-4">
+                <div class="flex items-center gap-x-2">
+                    <i class="lni lni-calendar"></i>
+                    <span class="text-gray-800">14 July, 2024</span>
+                </div>
+                <div class="flex items-center gap-x-2">
+                    <i class="lni lni-map-marker"></i>
+                    <span class="text-gray-800">Kathmandu, Nepal</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto">
+        <!-- Upcoming events -->
+        <section class="text-center py-16">
+            <h1 class="text-4xl font-bold text-gray-800">Upcoming <span class="text-blue-500">Events</span></h1>
+            <p class="text-gray-600 mt-4">Join us for thrilling events! Live music, workshops, art exhibits, and more! Mark your calendars and don't miss out!</p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <div class="bg-white text-blue-500 px-4 py-2 rounded-full hover:text-white hover:bg-blue-600 border-2 border-blue-600">ALL</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">ART</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">BUSINESS</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">EDUCATION</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">FESTIVAL</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">FOOD</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">NIGHTLIFE</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">SPORTS</div>
+                <div class="border-blue-500 bg-blue-500 text-white px-4 py-2 rounded-full hover:bg-blue-600 border-2 border-blue-600">MORE</div>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x400" alt="Megeve Winter Party">
+            <div class="p-6">
+                <span class="bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded">TRAVEL</span>
+                <span class="text-gray-600 text-sm ml-2">January 17, 2023</span>
+                <h2 class="text-xl font-bold mt-2">Megeve Winter Party</h2>
+                <p class="text-gray-700 mt-2">Join us for the ultimate winter party at Megeve. With live music, delicious food, and plenty of drinks, this is the perfect way to kick off the season.</p>
+                <div class="flex items-center mt-4">
+                <span class="text-gray-600">Megeve</span>
+                <span class="text-gray-600 ml-auto">$150</span>
+                </div>
+            </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x400" alt="Eventchamp Conference">
+            <div class="p-6">
+                <span class="bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded">BUSINESS</span>
+                <span class="text-gray-600 text-sm ml-2">March 12, 2023</span>
+                <h2 class="text-xl font-bold mt-2">Eventchamp Conference</h2>
+                <p class="text-gray-700 mt-2">Eventchamp Conference is an exceptional gathering of event professionals from across the globe. Join us for insightful discussions, networking and inspiration!</p>
+                <div class="flex items-center mt-4">
+                <span class="text-gray-600">London</span>
+                <span class="text-gray-600 ml-auto">$149</span>
+                </div>
+            </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-md overflow-hidden">
+            <img class="w-full h-48 object-cover" src="https://via.placeholder.com/600x400" alt="Walking on the Village Mountain">
+            <div class="p-6">
+                <span class="bg-yellow-400 text-white text-xs font-bold px-2 py-1 rounded">TRAVEL</span>
+                <span class="text-gray-600 text-sm ml-2">March 14, 2023</span>
+                <h2 class="text-xl font-bold mt-2">Walking on the Village Mountain</h2>
+                <p class="text-gray-700 mt-2">Join us for an unforgettable trek through the stunning Village Mountain. Breathtaking views, fresh air, and a fun group await! Hosted by Eventchamp.</p>
+                <div class="flex items-center mt-4">
+                <span class="text-gray-600">Munich</span>
+                <span class="text-gray-600 ml-auto">$99</span>
+                </div>
+            </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+</body>
+
+<script src="main.js"></script>
+
+</html>
